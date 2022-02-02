@@ -47,6 +47,12 @@ class _AnimatedButton2State extends State<AnimatedButton2>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // final size = MediaQuery.of(context).size.width;
     return AnimatedBuilder(

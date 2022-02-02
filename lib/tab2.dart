@@ -53,7 +53,7 @@ class _TAB2State extends State<TAB2> {
           children: [
             TweenAnimationBuilder<double>(
               tween: Tween<double>(begin: 10, end: endV),
-              duration: const Duration(seconds: 6),
+              duration: const Duration(seconds: 1),
               builder: (context, value, child) {
                 // print(value);
                 return Container(
@@ -67,6 +67,7 @@ class _TAB2State extends State<TAB2> {
               height: 30,
             ),
             Slider(
+              label: '$endV',
               value: endV,
               onChanged: (val) {
                 if (val == 200) {

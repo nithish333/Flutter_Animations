@@ -6,8 +6,10 @@ import 'package:example1/animated_list_2.dart';
 import 'package:example1/animated_list_3.dart';
 import 'package:example1/animated_list_4.dart';
 import 'package:example1/animated_menu_1.dart';
+import 'package:example1/animated_tabbar1.dart';
 import 'package:example1/animatedcontainerandopacity.dart';
 import 'package:example1/book.dart';
+import 'package:example1/carousel_2.dart';
 import 'package:example1/flip_card.dart';
 import 'package:example1/matrix_transforms.dart';
 import 'package:example1/tab2.dart';
@@ -50,7 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
           '/animatedlist2': (_) => const AnimatedList2(),
           '/animatedlist3': (_) => const AnimatedList3(),
           '/animatedlist4': (_) => const AnimatedList4(),
-          '/animatedbutton2': (_) => const AnimatedButton2()
+          '/animatedbutton2': (_) => const AnimatedButton2(),
+          '/carousel2': (_) => const Carousel2(),
+          '/animatedtabbar1': (_) => const AnimatedTabBar1()
         },
         home: const NewHome());
   }
@@ -186,7 +190,9 @@ class _NewHomeState extends State<NewHome> {
 
             const Heading(s: 'Carousel'),
             const GestureCard(
-                routeName: '/animatedcarousel1', title: 'Carousel 1'),
+                routeName: '/animatedcarousel1', title: 'General Carousel'),
+            const GestureCard(
+                routeName: '/carousel2', title: 'Moving Dot Carousel '),
             const SizedBox(
               height: 20,
             ),
@@ -200,10 +206,19 @@ class _NewHomeState extends State<NewHome> {
               height: 20,
             ),
 
+            //////////! TabBar  //////////
+
+            const Heading(s: 'TabBar'),
+            const GestureCard(
+                routeName: '/animatedtabbar1', title: 'Animated TabBar 1'),
+            const SizedBox(
+              height: 20,
+            ),
             //////////! RANDOM EFFECTS  //////////
 
             const Heading(s: 'Random Effects'),
             const GestureCard(routeName: '/flipcard', title: 'Flip Card'),
+
             const GestureCard(
                 routeName: '/book', title: 'A literal BOOK (not done)'),
           ],
